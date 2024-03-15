@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Disney+ Clone",
-  description: "Diseny+ Clone using Nextjs 14",
+  title: "Movies App",
+  description: "Movies App using Nextjs 14",
 };
 
 export default function RootLayout({
