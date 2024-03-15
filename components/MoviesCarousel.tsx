@@ -10,11 +10,11 @@ type Props = {
 
 const MoviesCarousel = ({ title, movies, isVertical }: Props) => {
   return (
-    <div className="z-50">
-      <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
+    <div className="z-40">
+      <h2 className="px-10 py-2 text-xl font-bold text-gray-300">{title}</h2>
       <div
         className={cn(
-          "flex space-x-4 overflow-scroll scrollbar-hide px-5 lg:px-10 py-5",
+          "flex overflow-scroll scrollbar-hide px-5 gap-5 lg:px-10 py-5",
           isVertical && "flex-col space-y-12 space-x-0"
         )}
       >

@@ -19,13 +19,10 @@ const CarouselsBanner = ({ movies }: Props) => {
   ]);
 
   return (
-    <div
-      className="overflow-hidden lg:-mt-40 relative cursor-pointer"
-      ref={emblaRef}
-    >
+    <div className="relative overflow-hidden cursor-pointer" ref={emblaRef}>
       <div className="flex">
         {movies.map((movie) => (
-          <div key={movie.id} className="flex-full min-w-0 relative">
+          <div key={movie.id} className="relative min-w-0 flex-full">
             <Image
               key={movie.id}
               src={getImagePath(movie.backdrop_path, true)}
@@ -33,10 +30,13 @@ const CarouselsBanner = ({ movies }: Props) => {
               width={1920}
               height={1080}
             />
-            <div className="hidden h-full w-full bg-gradient-to-r p-10 space-y-5 text-white from-gray-900/90 to-transparent md:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent font-bold">
-              <h2 className="text-5xl font-bold max-w-xl z-50">
-                {movie.title}
+            <div className="absolute top-0 left-0 hidden w-full h-full p-10 pt-40 mt-0 space-y-5 font-bold text-white bg-transparent bg-gradient-to-r from-gray-900/90 to-transparent md:inline xl:pt-52">
+              <h2 className="text-xl text-orange-300 underline">
+                {movie.type}
               </h2>
+              <h3 className="z-40 max-w-xl text-5xl font-bold">
+                {movie.title}
+              </h3>
               <p className="max-w-xl line-clamp-3">{movie.overview}</p>
             </div>
           </div>

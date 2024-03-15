@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@fontsource/metropolis";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -23,7 +24,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <div className="mt-20">{children}</div>
         </ThemeProvider>
       </body>
     </html>

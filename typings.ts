@@ -20,6 +20,7 @@ export type Movie = {
   vote_average: number;
   vote_count: number;
   production_companies: Company[];
+  type: string;
 };
 
 export type SearchResults = {
