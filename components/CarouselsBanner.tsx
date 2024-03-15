@@ -30,7 +30,7 @@ const CarouselsBanner = ({ movies }: Props) => {
               width={1920}
               height={1080}
             />
-            <div className="absolute top-0 left-0 hidden w-full h-full p-10 pt-40 mt-0 space-y-5 font-bold text-white bg-transparent bg-gradient-to-r from-gray-900/90 to-transparent md:inline xl:pt-52">
+            <div className="absolute top-0 left-0 hidden w-full h-full p-10 pt-40 mt-0 space-y-5 font-bold text-white bg-transparent bg-gradient-to-r from-gray-900/80 to-transparent md:inline xl:pt-60">
               <h2 className="text-xl text-orange-300 underline">
                 {movie.type}
               </h2>
@@ -42,7 +42,7 @@ const CarouselsBanner = ({ movies }: Props) => {
           </div>
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-blue-900/25 to-gray-300 dark:to-[#1A1C29]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-blue-900/25 to-[#1A1C29]" />
     </div>
   );
 };

@@ -21,6 +21,9 @@ export type Movie = {
   vote_count: number;
   production_companies: Company[];
   type: string;
+  budget: number;
+  status: string;
+  genres: Genre[];
 };
 
 export type SearchResults = {
