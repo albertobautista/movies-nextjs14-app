@@ -24,6 +24,7 @@ export type Movie = {
   budget: number;
   status: string;
   genres: Genre[];
+  runtime: number;
 };
 
 export type SearchResults = {

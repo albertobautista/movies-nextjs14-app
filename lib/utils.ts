@@ -23,3 +23,9 @@ export function formatToDollars(amount: number = 0): string {
 export function concatenateNames(genres: Genre[] = []): string {
   return genres.map((genre) => genre.name).join(", ");
 }
+
+export function convertMinutesToHours(minutes: number): string {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours} hours ${remainingMinutes} minutes`;
+}

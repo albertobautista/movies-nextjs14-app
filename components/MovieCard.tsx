@@ -17,7 +17,7 @@ const MovieCard = ({ movie }: Props) => {
         <Image
           className="w-fit lg:min-w-[350px] h-56 object-cover object-center rounded-xl"
           src={getImagePath(movie.backdrop_path || movie.poster_path)}
-          alt={movie.title}
+          alt={movie.title || movie.id.toString()}
           width={1920}
           height={1080}
           key={movie.id}
