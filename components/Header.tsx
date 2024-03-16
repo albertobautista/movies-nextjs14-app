@@ -7,11 +7,11 @@ import GenreDropdown from "./GenreDropdown";
 
 const Header = () => {
   return (
-    <header className="flex justify-between p-5 bg-gray-300 dark:bg-[#1A1C29] fixed w-full z-50 top-0 items-center ">
+    <header className="flex justify-center flex-wrap sm:justify-between p-5 pl-10 bg-gray-300 dark:bg-[#1A1C29] fixed w-full z-50 top-0 items-center ">
       <Link href="/" className="flex items-center justify-center gap-2 mr-10">
         <Image
           src="/movieIcon.svg"
-          alt="Disney Logo"
+          alt="Movies logo"
           width={50}
           height={50}
           className="cursor-pointer invert-0 dark:invert"
