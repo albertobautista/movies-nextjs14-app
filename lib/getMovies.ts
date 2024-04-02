@@ -78,9 +78,9 @@ export async function getDiscoverMovies(id?: string, keywords?: string) {
   const data = await fetchFromTMDB(url);
   return data.results;
 }
-export async function getMovieDetails(id?: string) {
+export async function getMovieDetails(id?: string, type?: string) {
   const url = new URL(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`
+    `https://api.themoviedb.org/3/${type}/${id}?language=en-US`
   );
 
   const data = await fetchFromTMDBSingle(url);

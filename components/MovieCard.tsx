@@ -5,10 +5,11 @@ import Link from "next/link";
 
 type Props = {
   movie: Movie;
+  type: "movie" | "tv";
 };
-const MovieCard = ({ movie }: Props) => {
+const MovieCard = ({ movie, type }: Props) => {
   return (
-    <Link href={`/movie/details/${movie.id}`}>
+    <Link href={`/movie/details/${movie.id}/${type}`}>
       <div className="relative min-w-[200px] flex-shrink-0 cursor-pointer transform rounded-xl  hover:scale-105 transition duration-200 hover:drop-shadow-lg">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/10  to-[#1A1C29] z-10 rounded-xl" />
         <p className="absolute z-20 text-white bottom-5 left-5">

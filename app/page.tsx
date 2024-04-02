@@ -28,8 +28,8 @@ export default async function Home() {
       <div className="flex flex-col mt-7">
         <h1 className="px-10 text-4xl tracking-wider">TV Series</h1>
 
-        <MoviesCarousel movies={popularTVSeries} title="Popular" />
-        <MoviesCarousel movies={topRatedTVSeries} title="Top Rated" />
+        <MoviesCarousel movies={popularTVSeries} type="tv" title="Popular" />
+        <MoviesCarousel movies={topRatedTVSeries} type="tv" title="Top Rated" />
       </div>
     </main>
   );

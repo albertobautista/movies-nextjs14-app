@@ -6,9 +6,15 @@ type Props = {
   title?: string;
   movies: Movie[];
   isVertical?: boolean;
+  type?: "movie" | "tv";
 };
 
-const MoviesCarousel = ({ title, movies, isVertical }: Props) => {
+const MoviesCarousel = ({
+  title,
+  movies,
+  isVertical,
+  type = "movie",
+}: Props) => {
   return (
     <div className="z-40">
       <h2 className="px-10 py-1 text-xl font-bold text-gray-300">{title}</h2>
@@ -27,7 +33,7 @@ const MoviesCarousel = ({ title, movies, isVertical }: Props) => {
                     "flex flex-col space-y-5 mb-5 items-center lg:flex-row space-x-5"
                 )}
               >
-                <MovieCard movie={movie} />
+                <MovieCard movie={movie} type={type} />
                 <div className="max-w-2xl">
                   <p className="font-bold">
                     {movie.title} ({movie.release_date?.split("-")[0]})
@@ -37,7 +43,9 @@ const MoviesCarousel = ({ title, movies, isVertical }: Props) => {
                 </div>
               </div>
             ))
-          : movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+          : movies.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} type={type} />
+            ))}
       </div>
     </div>
   );

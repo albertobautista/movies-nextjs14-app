@@ -3,16 +3,16 @@ import { getImagePath } from "@/lib/getImagePath";
 import { getMovieDetails } from "@/lib/getMovies";
 import { concatenateNames, formatToDollars } from "@/lib/utils";
 import Image from "next/image";
-import { convertMinutesToHours } from "../../../../lib/utils";
+import { convertMinutesToHours } from "../../../../../lib/utils";
 
 type Props = {
   params: {
     id: string;
+    type: string;
   };
 };
-const MovieDetails = async ({ params: { id } }: Props) => {
-  const movie = await getMovieDetails(id);
-
+const MovieDetails = async ({ params: { id, type } }: Props) => {
+  const movie = await getMovieDetails(id, type);
   return (
     <div className="relative overflow-hidden">
       <div className="flex">
@@ -30,11 +30,13 @@ const MovieDetails = async ({ params: { id } }: Props) => {
               <p className="text-xl">{movie.overview}</p>
               <div className="grid grid-cols-2 gap-2 lg:grid-cols-1">
                 <div className="flex flex-col gap-2 md:flex-row">
-                  <h3 className="text-md">{movie.release_date}</h3> •
+                  <h3 className="text-md">{movie.release_date}</h3>{" "}
+                  <span className="hidden md:block">•</span>
                   <h3 className="text-md">
                     {convertMinutesToHours(movie.runtime)}
                   </h3>
-                  • {concatenateNames(movie.genres)}
+                  <span className="hidden md:block">•</span>{" "}
+                  {concatenateNames(movie.genres)}
                 </div>
                 <div className="flex gap-2 my-3">
                   <InfoBox value={"★" + " " + movie.vote_average.toFixed()} />
