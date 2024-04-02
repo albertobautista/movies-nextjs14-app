@@ -7,6 +7,20 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export const metadata: Metadata = {
   title: "Movies App",
   description: "Movies App using Nextjs 14",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/movieIcon.svg",
+        href: "/movieIcon.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/movieIcon.svg",
+        href: "/movieIcon.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
