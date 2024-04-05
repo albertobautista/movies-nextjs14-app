@@ -17,7 +17,9 @@ const MoviesCarousel = ({
 }: Props) => {
   return (
     <div className="z-40">
-      <h2 className="px-10 py-1 text-xl font-bold text-gray-300">{title}</h2>
+      <h2 className="px-5 md:px-10  py-1 text-xl font-bold text-gray-300">
+        {title}
+      </h2>
       <div
         className={cn(
           "flex overflow-scroll scrollbar-hide px-5 gap-5 lg:px-10 py-5",
