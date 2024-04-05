@@ -25,6 +25,7 @@ export type Movie = {
   status: string;
   genres: Genre[];
   runtime: number;
+  name: string;
 };
 
 export type SearchResults = {
